@@ -1,0 +1,99 @@
+.admin-colors .setting-theme-colors .btn-bluegreen {
+  background: #1d8ef0;
+  background: linear-gradient(135deg, #1d8ef0 0%, #62c263 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-blue {
+  background: #14B9D6;
+  background: linear-gradient(135deg, #14B9D6 0%, #06aecc 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-cyan {
+  background: #13a2a6;
+  background: linear-gradient(135deg, #13a2a6 0%, #0c9599 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-green {
+  background: #53a96b;
+  background: linear-gradient(135deg, #53a96b 0%, #53ab6c 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-purple {
+  background: #9c27b0;
+  background: linear-gradient(135deg, #9c27b0 0%, #9310aa 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-orange {
+  background: #ee7825;
+  background: linear-gradient(135deg, #ee7825 0%, #e97b23 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-red {
+  background: #f83b2e;
+  background: linear-gradient(135deg, #f83b2e 0%, #fa3a2c 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-rose {
+  background: #e91e63;
+  background: linear-gradient(135deg, #e91e63 0%, #e4004c 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-yellow {
+  background: #ffbd15;
+  background: linear-gradient(135deg, #ffbd15 0%, #fab300 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-gold {
+  background: #caab5d;
+  background: linear-gradient(135deg, #caab5d 0%, #b7954b 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-darkblue {
+  background: #0648B3;
+  background: linear-gradient(135deg, #0648B3 0%, #0747b1 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-lightblue {
+  background: #5a8dee;
+  background: linear-gradient(135deg, #5a8dee 0%, #7e98ec 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-darkpurple {
+  background: #4527a0;
+  background: linear-gradient(135deg, #4527a0 0%, #410e83 100%);
+}
+
+.admin-colors .setting-theme-colors .btn-lightgreen {
+  background: #90ca4b;
+  background: linear-gradient(135deg, #90ca4b 0%, #87bf44 100%);
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkgray {
+  background: #18191a !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkblue {
+  background: #1c212e !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkpurple {
+  background: #15111a !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkred {
+  background: #130c0b !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkorange {
+  background: #221d1a !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkyellow {
+  background: #1c1b19 !important;
+}
+
+.admin-colors .setting-theme-bg-colors .btn.btn-darkgreen {
+  background: #0c0f0e !important;
+}
+
+/*# sourceMappingURL=admin-colors.css.map */

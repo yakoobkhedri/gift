@@ -1,0 +1,426 @@
+#dropdownList{
+    top: 170px;
+    width: 480px;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+    right: 163px!important;
+   }
+   #dropdownList.active{
+     top: 70px;
+     opacity: 100%;
+     visibility: visible;
+   }
+   #dropdownList a{
+    color: black;
+   }
+   #cartdropdownList{
+    top: 90px;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+   }
+   #cartdropdownList.active{
+     top: 50px;
+     opacity: 100%;
+     visibility: visible;
+   }
+.rounded-15{
+    border-radius: 15px;
+}
+.bg-gray{
+    background-color: #f3f5fb;
+}
+.bg-purple{
+    background-color: #8b72ff;
+}
+.bg-orange{
+    background-color: #fcce5f!important;
+}
+.bg-orange2{
+    background-color: #fff5dc;
+}
+.bg-pink{
+    background-color: #ffd3d3;
+}
+.btn-pink{
+    background-color: #ffeff1;
+    color: #ff6377!important;
+}
+.btn-success2{
+    background-color: #e5faf6;
+    color: #0ad1a9!important;
+}
+.btn-red2{
+    background-color: #ff7070;
+}
+.text-red{
+    color: #ff7070;
+}
+.text-success2{
+    color: #0ad1a9!important;
+}
+.outline-none{
+    outline: none;
+}
+.z-20{
+    z-index: 20;
+}
+.-right-12{
+    right: -12px;
+}
+.left-20{
+    left: 20px;
+}
+.-top-4{
+    top: -4px!important;
+}
+.top-76{
+    top: 76px!important;
+}
+.fs-12{
+    font-size: 12px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-33{
+    font-size: 33px;
+}
+.overflow-y-auto{
+    overflow-y: auto;
+}
+.w-18{
+    width: 18px;
+}
+.w-21{
+    width: 21px;
+}
+.w-24{
+    width: 24px;
+}
+.w-51{
+    width: 51px;
+}
+.w-61{
+    width: 61px;
+}
+.w-82{
+    width: 82px;
+}
+.w-126{
+    width: 126px;
+}
+.w-263{
+    width: 263px;
+}
+.h-18{
+    height: 18px;
+}
+.h-21{
+    height: 21px;
+}
+.h-24{
+    height: 24px;
+}
+.h-51{
+    height: 51px;
+}
+.h-61{
+    height: 61px;
+}
+.h-68{
+    height: 68px;
+}
+.h-142{
+    height: 142px;
+}
+.h-475{
+    height: 475px;
+}
+.pb-51{
+    padding-bottom: 51px;
+}
+.transition{
+    transition: all .4s;
+}
+.alert-orange{
+    background-color: #ffeadd;
+    color: #a56f4f;
+}
+.nav-pills .nav-link.active{
+    background-color: #fd6478!important;
+}
+.nav-pills .nav-link.active span{
+    color: white!important;
+}
+.shadow-hover:hover{
+    margin-top: -5px;
+  box-shadow: 0 5px 25px rgba(66,71,74,0.16) !important;
+}
+.price a.active{
+    background-color: #ffe8eb;
+    color: #ff8091;
+}
+.success-hover:hover{
+    background-color: #c7f5eb;
+}
+.purple-hover:hover{
+    background-color: #613fff!important;
+}
+.pink-hover:hover{
+    background-color: rgba(255,99,119,0.22)!important;
+}
+.pink-hover2:hover{
+    background-color: #ff5151!important;
+}
+.orange-hover:hover{
+    background-color: #ffc330!important;
+}
+.country .moving-tab{
+    display: none;
+}
+.bank{
+    border: 2px solid #f3f5fb;
+    transition: all .4s;
+}
+.bank.active{
+    border: 2px solid #0fd2ab;
+}
+.bank svg{
+  opacity: 0;
+  transition: all .4s;
+}
+.bank.active svg{
+  opacity: 100%;
+}
+.country-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.country-button {
+    display: flex;
+    align-items: center;
+    padding: 6px 2px 6px 23px;
+    background: white;
+      background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 9px;
+}
+
+.country-button:hover {
+    background-color: #fd6478;
+    border-color: #ccc;
+    color: white;
+}
+.country-button span {
+  flex-shrink: 0;
+}
+.flag-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.flag-icon img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#country-select option:checked {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.highlighted {
+    background-color: #fd6478;
+    font-weight: bold;
+    color: white;
+}
+.review-slider .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 15px;
+    transition: transform 0.3s;
+}
+
+.review-slider .card:hover {
+    transform: translateY(-10px);
+}
+
+.review-slider .product-image {
+    width: 100px;
+    /* یا هر اندازه‌ای که می‌خواهید */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* اگر بخواهید تصویر گرد باشد */
+    margin-bottom: 10px;
+}
+
+.review-image {
+    width: 100px;
+    /* یا هر اندازه دلخواه */
+    height: 100px;
+    /* یا هر اندازه دلخواه */
+    object-fit: cover;
+    /* تصویر را به طور کامل داخل کادر قرار می‌دهد */
+    border-radius: 10px;
+    /* لبه‌های تصویر را گرد می‌کند */
+}
+
+
+.review-slider .product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-slider .card-body {
+    padding: 20px;
+}
+
+.review-slider .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.review-slider .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review-slider .card-subtitle {
+    font-size: 0.875rem;
+    color: #999;
+}
+.review-comment {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    /* سه خط از متن را نشان می‌دهد */
+    white-space: normal;
+    /* متن را به صورت چند خطی نمایش می‌دهد */
+    position: relative;
+}
+
+.review-box {
+    max-width: 280px;
+    /* عرض کارت را کوچکتر کنید */
+    margin: 0 auto;
+    /* مرکز چین شدن کارت‌ها */
+    padding: 15px;
+    /* فضای داخلی کارت */
+    border-radius: 10px;
+    /* گرد کردن گوشه‌های کارت */
+}
+
+.review-box .card-body {
+    padding: 10px;
+    /* فضای داخلی کارت را کمتر کنید */
+}
+
+.product-image {
+    max-width: 100px;
+    /* اندازه تصویر محصول را کوچک کنید */
+    margin-bottom: 10px;
+    /* فضای خالی زیر تصویر */
+}
+
+
+/* استایل پاپ آپ */
+.popup {
+    display: none;
+    /* پنهان به طور پیش‌فرض */
+    position: absolute;
+    /* موقعیت نسبی به عنصر والد */
+    bottom: 100%;
+    /* نمایش پاپ آپ در بالا متن */
+    left: 0;
+    width: 150px;
+    /* عرض پاپ آپ */
+    height: 100px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* بالاتر از سایر محتوا */
+    max-height: 200px;
+    /* حداکثر ارتفاع پاپ آپ */
+    overflow-y: auto;
+    /* پیمایش عمودی */
+    transition: opacity 0.3s ease;
+    /* انیمیشن نرمی برای ظاهر شدن */
+}
+
+/* دکمه بستن */
+.popup-content {
+    position: relative;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ccc;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+@media screen and (max-width:992px) {
+    .flex-mdd-row{
+        flex-direction: row!important;
+    }
+    #dropdownList{
+      width: 100%;
+      position: static!important;
+      max-height: 0;
+      box-shadow: none!important;
+    }
+    #dropdownList.active{
+      max-height: 3000px;
+      margin-top: 12px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .border-bottom-md-0{
+        border-bottom: 0;
+    }
+}
+@media screen and (max-width:576px) {
+    .fs-sm-24{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width:400px) {
+    .w-smm-100{
+        width: 100%!important;
+    }
+}

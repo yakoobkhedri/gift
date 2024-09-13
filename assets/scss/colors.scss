@@ -1,0 +1,126 @@
+:root{
+    --text-white: #fff;
+    --dark-danger: #ff5b5c;
+} 
+
+$theme-colors: (
+    // name      : (from     , to       , bg-1     ,      fg-1)
+    "bluegreen"  : (#1d8ef0, #62c263, #f5f5f5, #575757),
+    "blue"       : (#14B9D6, #06aecc, #f5f5f5, #333333),
+    "cyan"       : (#13a2a6, #0c9599, #f5f5f5, #333333),
+    "green"      : (#53a96b, #53ab6c, #f5f5f5, #333333),
+    "purple"     : (#9c27b0, #9310aa, #f5f5f5, #333333),
+    "orange"     : (#ee7825, #e97b23, #f5f5f5, #333333),
+    "red"        : (#f83b2e, #fa3a2c, #f5f5f5, #333333),
+    "rose"       : (#e91e63, #e4004c, #f5f5f5, #333333),
+    "yellow"     : (#ffbd15, #fab300, #f5f5f5, #333333),
+    "gold"       : (#caab5d, #b7954b, #f5f5f5, #333333),
+    "darkblue"   : (#0648B3, #0747b1, #f5f5f5, #333333),
+    "lightblue"  : (#5a8dee, #7e98ec, #f5f5f5, #333333),
+    "darkpurple" : (#4527a0, #410e83, #f5f5f5, #333333),
+    "lightgreen" : (#90ca4b, #87bf44, #f5f5f5, #333333)
+);
+
+@each $color, $values in $theme-colors {
+
+    .btn-#{$color}{
+        background: #{nth($values, 1)};
+        background: linear-gradient(135deg, #{nth($values, 1)} 0%,#{nth($values, 2)} 100%);
+    }
+    .bg-#{$color}{
+        background: #{nth($values, 1)};
+    }
+    body.theme-#{$color}{
+        --from: #{nth($values, 1)};
+        --to: #{nth($values, 2)};
+        --bg-1: #{nth($values, 3)};
+        --fg-1: #{nth($values, 4)};
+
+        @if($color=='bluegreen'){
+            --dark-fg-btn-primary: #5a8dee;
+        }@else{
+            --dark-fg-btn-primary: #{nth($values, 1)};
+        }
+
+
+        .btn.bg-gradient-primary {
+            box-shadow: 0 3px 3px 0 rgb(nth($values, 1), 0.1), 0 3px 1px -2px rgb(nth($values, 1), 0.2), 0 1px 5px 0 rgb(nth($values, 1), 0.15);
+        }
+        .btn.bg-gradient-primary:hover, .btn-user:hover  {
+            box-shadow: 0 14px 26px -12px rgb(nth($values, 2), 0.4), 0 4px 23px 0 rgb(nth($values, 2), 0.15), 0 8px 10px -5px rgb(nth($values, 2), 0.2);
+        }
+        .tabs-box:after{
+            background: rgb(84,176,141);
+            background: -moz-linear-gradient(left, rgb(nth($values, 2), 0.8) 0%, nth($values, 2) 100%);
+            background: -webkit-linear-gradient(left, rgb(nth($values, 2), 0.8) 0%,nth($values, 2) 100%);
+            background: linear-gradient(to right, rgb(nth($values, 2), 0.8) 0%, nth($values, 2) 100%);
+        }
+
+        .form-check:not(.form-switch) .form-check-input[type="radio"]:after {
+            background-image: linear-gradient(220deg, nth($values, 1) 0%, nth($values, 2) 100%), var(--bs-gradient);
+        }
+
+        
+        // Exceptions
+        a.coditions-link:hover{
+            @if($color=='darkblue' or $color=='darkpurple'){
+                color: #f5f5f5;
+            }@else{
+                color: var(--from);
+            }
+        }
+        @if($color=='yellow'){
+            .btn.btn-primary, .btn.bg-gradient-primary, .bg-gradient-primary,
+            .navbar.navbar-main a.nav-link, ul.tabs li.current b{
+                color: #333 !important;
+            }
+        }
+    }
+    @if($color=='bluegreen'){
+        body.dark{
+            .form-check:not(.form-switch) .form-check-input[type="radio"]:after {
+                background-image: linear-gradient(220deg, #5a8dee 0%, #5a8dee 100%), var(--bs-gradient);
+            }
+        }
+    }
+}
+
+
+
+$theme-bg-colors: (
+    // name      : (dark-bg-1, dark-bg-2, dark-bg-3, dark-bg-4, dark-bg-5, dark-fg-1, dark-fg-2, dark-fg-3, dark-br  , dark-br-f)
+    "darkgray"   : (#18191a, #242526, #3a3b3c, #474849, #333333, #ffffff, #c3c3c5, #868a92, #2e3035, #5e6068),
+    "darkblue"   : (#1c212e, #292f43, #2e344b, #2e344b, #333333, #ffffff, #d8deea, #8295ba, #36415b, #666c81),
+    "darkpurple" : (#15111a, #19161d, #3b3a3c, #443f49, #333333, #ffffff, #c3c3c5, #8e82ba, #514a5a, #6d6681),
+    "darkred"    : (#130c0b, #1d1717, #0e0808, #201414, #333333, #ffffff, #ead8d8, #ff9292, #352929, #4b4343),
+    "darkorange" : (#221d1a, #3a3633, #353330, #33312f, #333333, #ffffff, #eae4d8, #ee7825, #333333, #494847),
+    "darkyellow" : (#1c1b19, #3a3a33, #353530, #33332f, #333333, #ffffff, #eae7d8, #ffb93c, #333333, #4b4b4b),
+    "darkgreen"  : (#0c0f0e, #161c1a, #0e1313, #333333, #333333, #ffffff, #d1ffec, #3eeba3, #202721, #47524b),
+);
+@each $color, $values in $theme-bg-colors {
+    .theme-bg-colors{
+        .btn.btn-#{$color}{
+            background: nth($values, 1) !important;
+        }
+    } 
+    body.dark.#{$color}{
+        --dark-bg-1           : #{nth($values, 1)};
+        --dark-bg-2           : #{nth($values, 2)};
+        --dark-bg-3           : #{nth($values, 3)};
+        --dark-bg-4           : #{nth($values, 4)};
+        --dark-bg-5           : #{nth($values, 5)};
+        --dark-fg-1           : #{nth($values, 6)};
+        --dark-fg-2           : #{nth($values, 7)};
+        --dark-fg-3           : #{nth($values, 8)};
+        --dark-border         : #{nth($values, 9)};
+        --dark-border-focus   : #{nth($values, 10)};
+
+
+        .pagination > li.active > a{
+            background: rgb(nth($values, 2), 0.7);
+        }
+        .pagination > li:not(.active) > a:hover{
+            background: rgb(nth($values, 2), 0.5);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+
+{
+    "theme-colors":{
+        "bluegreen"  : ["gray", "blue", "green"],
+        "darkblue"   : ["gray", "blue", "green"],
+        "blue"       : ["gray", "blue", "green"],
+        "lightblue"  : ["gray", "blue", "green"],
+        "cyan"       : ["gray", "blue", "green"],
+        "green"      : ["gray", "blue", "green"],
+        "lightgreen" : ["gray", "blue", "green"],
+        "darkpurple" : ["gray", "purple"],
+        "purple"     : ["gray", "purple"],
+        "red"        : ["gray", "red"],
+        "rose"       : ["gray", "red"],
+        "orange"     : ["gray", "orange", "yellow"],
+        "yellow"     : ["gray", "orange", "yellow"],
+        "gold"       : ["gray", "orange", "yellow"]
+    },
+    "theme-bg-colors":{
+        "darkgray"   : "تیره پیش فرض",
+        "darkblue"   : "تیره به سمت آبی",
+        "darkpurple" : "تیره به سمت بنفش",
+        "darkred"    : "تیره به سمت قرمز",
+        "darkorange" : "تیره به سمت نارنجی",
+        "darkyellow" : "تیره به سمت زرد",
+        "darkgreen"  : "تیره به سمت سبز"
+    }
+}

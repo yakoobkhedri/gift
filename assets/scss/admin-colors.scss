@@ -1,0 +1,42 @@
+$theme-colors: (
+    "bluegreen"  : (#1d8ef0, #62c263),
+    "blue"       : (#14B9D6, #06aecc),
+    "cyan"       : (#13a2a6, #0c9599),
+    "green"      : (#53a96b, #53ab6c),
+    "purple"     : (#9c27b0, #9310aa),
+    "orange"     : (#ee7825, #e97b23),
+    "red"        : (#f83b2e, #fa3a2c),
+    "rose"       : (#e91e63, #e4004c),
+    "yellow"     : (#ffbd15, #fab300),
+    "gold"       : (#caab5d, #b7954b),
+    "darkblue"   : (#0648B3, #0747b1),
+    "lightblue"  : (#5a8dee, #7e98ec),
+    "darkpurple" : (#4527a0, #410e83),
+    "lightgreen" : (#90ca4b, #87bf44)
+);
+
+@each $color, $values in $theme-colors {
+    .admin-colors .setting-theme-colors .btn-#{$color}{
+        background: #{nth($values, 1)};
+        background: linear-gradient(135deg, #{nth($values, 1)} 0%,#{nth($values, 2)} 100%);
+    }
+}
+
+
+
+$theme-bg-colors: (
+    "darkgray"   : (#18191a),
+    "darkblue"   : (#1c212e),
+    "darkpurple" : (#15111a),
+    "darkred"    : (#130c0b),
+    "darkorange" : (#221d1a),
+    "darkyellow" : (#1c1b19),
+    "darkgreen"  : (#0c0f0e)
+);
+@each $color, $values in $theme-bg-colors {
+    .admin-colors .setting-theme-bg-colors{
+        .btn.btn-#{$color}{
+            background: nth($values, 1) !important;
+        }
+    } 
+}

@@ -1,0 +1,19 @@
+body {
+  font-family: "tahoma"; }
+
+h1 {
+  font-family: "tahoma"; }
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: blue;
+  padding: 10px 20px; }
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+  color: green;
+  margin-top: 50px; }
+
+/*# sourceMappingURL=custom.css.map */
