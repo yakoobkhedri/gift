@@ -233,15 +233,15 @@ $(document).ready(function () {
     item.setAttribute("productId", index);
   });
   $(".product").click(function (e) {
-    if(e.target.closest(".requestProduct")){
+    if (e.target.closest(".requestProduct")) {
       Swal.fire({
         title: "ارسال شد",
         text: "درخواست موجود کردن محصول ارسال شد",
         icon: "warning",
         confirmButtonText: "تایید",
       });
-      return
-    };
+      return;
+    }
     let products = localStorage.getItem("products");
     let pcs = 1;
     if (products) products = JSON.parse(products);
@@ -270,6 +270,7 @@ $(document).ready(function () {
       icon: "success",
       confirmButtonText: "تایید",
     });
+    createProductsCart();
   });
   // User select product event
   // $(".product").click(function () {

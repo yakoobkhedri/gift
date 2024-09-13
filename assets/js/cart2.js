@@ -6,36 +6,41 @@ function removeProductItem(id) {
   localStorage.setItem("products", JSON.stringify(products));
   renderProducts();
 }
-function inDeincreaseValue(isSet, id, value, isInc) {
-  let pcs = 0;
-  console.log(value);
-  if (isInc) {
-    products.forEach((item) => {
-      if (id === item.id) {
-        if (!isSet) item.pcs += value;
-        else item.pcs = value;
-        pcs = item.pcs;
-      }
-    });
-  } else {
-    products.forEach((item) => {
-      if (id === item.id) {
-        if (!isSet) item.pcs -= value;
-        else item.pcs = value;
-        pcs = item.pcs;
-      }
-    });
-  }
+function inDeincreaseValue(isSet, id, value, isInc, input = null) {
+  let pcs = "";
+  if (Number(value) && value)
+    if (isInc) {
+      products.forEach((item) => {
+        if (id === item.id) {
+          if (!isSet) item.pcs += Number(value);
+          else item.pcs = Number(value);
+          if (item.pcs < 1) item.pcs = 1;
+        }
+      });
+    } else {
+      products.forEach((item) => {
+        if (item.pcs > 1 && id === item.id) {
+          if (!isSet) item.pcs -= Number(value);
+          else item.pcs = Number(value);
+        } else {
+          item.pcs = 1;
+        }
+      });
+    }
   localStorage.setItem("products", JSON.stringify(products));
+  console.log(pcs);
+  if (input) {
+    if (pcs && pcs !== Number(input.value)) {
+      if (pcs) input.value = pcs;
+      else input.value = 1;
+    }
+  }
+
   return pcs;
 }
 function clickHandInDeinc(element, id, value, isInc = true) {
   let pcs = inDeincreaseValue(false, id, value, isInc);
-  if (isInc) {
-    element.nextElementSibling.value = pcs;
-  } else {
-    element.previousElementSibling.value = pcs;
-  }
+  renderProducts();
 }
 function renderProducts() {
   productsCont.innerHTML = "";
@@ -79,11 +84,19 @@ function renderProducts() {
                         <div class="col-lg-2 col-12 border-bottom border-bottom-lg-0 py-3 py-lg-0 d-flex align-items-center justify-content-between justify-content-lg-center gap-2">
                             <p class="d-lg-none">تعداد</p>
                             <div class="quantity gap-2 d-flex align-items-center justify-content-center">
-                                <button onclick="clickHandInDeinc(this,${item.id},1)" class="btn btn-icon btn-default" type="button">
+                                <button onclick="clickHandInDeinc(this,${
+                                  item.id
+                                },1)" class="btn btn-icon btn-default" type="button">
                                     <i class="fa fa-plus"></i>
                                 </button>
-                                <input oninput="inDeincreaseValue(true,${item.id},Number(this.value),false)" type="number" value="${item.pcs}" class="mb-0" min="1" max="25" title="تعداد">
-                                <button onclick="clickHandInDeinc(this,${item.id},1,false)"class="btn btn-icon btn-default" type="button">
+                                <input onblur="renderProducts()" oninput="inDeincreaseValue(true,${
+                                  item.id
+                                },Number(this.value),false)" type="number" value="${
+      item.pcs
+    }" class="mb-0" min="1" max="25" title="تعداد">
+                                <button onclick="clickHandInDeinc(this,${
+                                  item.id
+                                },1,false)"class="btn btn-icon btn-default" type="button">
                                     <i class="fa fa-minus"></i>
                                 </button>
                             </div>
@@ -94,8 +107,9 @@ function renderProducts() {
                         </div>
                         <div
                             class="col-lg-2 col-12 py-3 py-lg-0 text-center text-success2 fs-20 d-flex align-items-center justify-content-between justify-content-lg-center gap-2">
-                            <p class="d-lg-none">جمع کل</p>
-                            <p>  ${item.price} ${item.currency}</p>
+                            <p class="d-lg-none">جمع کل</p> <p class="fs-18 font-weight-bold">${Number(
+                              Number(item.price.replace(/\,/g, "")) * item.pcs
+                            ).toLocaleString()} ${item.currency}</p>
                         </div>
                     </div>`;
     productsCont.innerHTML += product;
