@@ -1,6 +1,5 @@
 const productsCont = document.querySelector(".productsCont");
 
-let products = localStorage.getItem("products");
 function removeProductItem(id) {
   products = products.filter((item) => item.id !== id);
   localStorage.setItem("products", JSON.stringify(products));
